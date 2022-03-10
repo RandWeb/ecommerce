@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pranca.Domain\Pranca.Domain.csproj" />
+    <ProjectReference Include="..\Pranca.Infrastructure.EFCore.Identity\Pranca.Infrastructure.EFCore.Identity.csproj" />
+  </ItemGroup>
+
+</Project>
