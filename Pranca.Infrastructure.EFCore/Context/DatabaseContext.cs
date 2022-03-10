@@ -33,10 +33,12 @@ namespace Pranca.Infrastructure.EFCore.Context
         /// <summary>
         /// تنظمیات اجرا شدن DatabaseContext
         /// </summary>
-        /// <param name="optionsBuilder"></param>
+        /// <param name="optionsBuilder"></param>       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+
+            optionsBuilder.UseSqlServer("Server=.;Database=BeautyDb;Trusted Connection=True");
         }
     }
 }

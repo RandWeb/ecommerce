@@ -16,6 +16,8 @@ namespace Pranca.Infrastructure.EFCore.Mapping.Users
             builder.Property(p => p.ParentId).IsRequired(false).HasMaxLength(450);
             builder.Property(p => p.PageName).IsRequired().HasMaxLength(100);
             builder.Property(p => p.Description).IsRequired().HasMaxLength(500);
+
+            builder.ToTable("Roles");
         }
     }
 }
