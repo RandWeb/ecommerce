@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
 using Pranca.Infrastructure.EFCore.Context;
+using Pranca.Infrastructure.Logger.Contracts;
+using Pranca.Infrastructure.SeriLogger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +16,12 @@ namespace Pranca.Infrastructure.Core.Configuraction
     {
         public static void Config(this IServiceCollection services)
         {
-            services.AddDbContext<DatabaseContext>(options=> {
-                options.UseSqlServer("Server=.;Database=BeautyDb;Trusted=true");
+            services.AddDbContext<DatabaseContext>(options =>
+            {
+                options.UseSqlServer("Server=.;Database=BeautyDb;Trusted_Connection=true");
             });
+
+            services.AddSingleton<ILogger,Serilogger>();
         }
     }
 }

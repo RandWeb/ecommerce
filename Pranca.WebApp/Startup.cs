@@ -25,23 +25,21 @@ namespace Pranca.WebApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Config();
             services.AddLocalizationService("Localization/Resource");
             services.WebEncoderService();
 
             services.AddRazorPagesService()
                 .AddCustomLocalization("Localization/Resource")
                 .AddCustomDataAnnotationLocalization(services,typeof(SharedResource));
-
+            services.Config();
             services.AddInjects();
-
-            services.AddCustomIdentitiy()
+           /* services.AddCustomIdentitiy()
                     .AddErrorDescriber<CustomErrorDescriber>();
             services.AddCustomAuthenticatinJwt(
                                                 AuthConstants.ValidationKey,
                                                 AuthConstants.SecretCode,
                                                 AuthConstants.Audience,
-                                                AuthConstants.Issuer);
+                                                AuthConstants.Issuer);*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

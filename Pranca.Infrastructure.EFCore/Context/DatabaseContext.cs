@@ -38,7 +38,7 @@ namespace Pranca.Infrastructure.EFCore.Context
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Server=.;Database=BeautyDb;Trusted Connection=True");
+            optionsBuilder.UseSqlServer("Server=.;Database=BeautyDb;Trusted_Connection=True");
         }
     }
 }

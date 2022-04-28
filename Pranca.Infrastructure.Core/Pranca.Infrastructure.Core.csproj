@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pranca.Infrastructure.EFCore\Pranca.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\Pranca.Infrastructure.Logger\Pranca.Infrastructure.Logger.csproj" />
+    <ProjectReference Include="..\Pranca.Infrastructure.SeriLogger\Pranca.Infrastructure.SeriLogger.csproj" />
   </ItemGroup>
 
 </Project>
