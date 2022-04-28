@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Localization;
+using Pranca.WebApp.Localization.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;

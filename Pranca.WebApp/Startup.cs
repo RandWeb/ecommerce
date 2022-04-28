@@ -33,10 +33,15 @@ namespace Pranca.WebApp
                 .AddCustomLocalization("Localization/Resource")
                 .AddCustomDataAnnotationLocalization(services,typeof(SharedResource));
 
-            services.AddInject();
+            services.AddInjects();
+
             services.AddCustomIdentitiy()
                     .AddErrorDescriber<CustomErrorDescriber>();
-            services.AddCustomAuthenticatinJwt(AuthConstants.ValidationKey,AuthConstants.SecretCode,AuthConstants.Audience, AuthConstants.Issuer)
+            services.AddCustomAuthenticatinJwt(
+                                                AuthConstants.ValidationKey,
+                                                AuthConstants.SecretCode,
+                                                AuthConstants.Audience,
+                                                AuthConstants.Issuer);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
