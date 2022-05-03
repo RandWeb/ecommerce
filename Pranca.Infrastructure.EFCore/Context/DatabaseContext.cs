@@ -18,6 +18,8 @@ namespace Pranca.Infrastructure.EFCore.Context
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
+
+        public DatabaseContext() { }
         /// <summary>
         /// زمانی که تغییرات برای دیتابیس فرستاده می شود
         /// </summary>
@@ -30,15 +32,13 @@ namespace Pranca.Infrastructure.EFCore.Context
             var entitiesAssemly = typeof(ISignConfiguration).Assembly;
             builder.RegisterEntityTypeConfiguration(entitiesAssemly);
         }
-        /// <summary>
+/*        /// <summary>
         /// تنظمیات اجرا شدن DatabaseContext
         /// </summary>
         /// <param name="optionsBuilder"></param>       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
-
             optionsBuilder.UseSqlServer("Server=.;Database=BeautyDb;Trusted_Connection=True");
-        }
+        }*/
     }
 }

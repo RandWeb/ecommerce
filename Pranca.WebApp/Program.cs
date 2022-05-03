@@ -19,12 +19,13 @@ namespace Pranca.WebApp
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+                .ConfigureWebHostDefaults(webBuilder=>
                 {
-                    if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
+                  /*  if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
                         webBuilder.UseSeriLogConsole();
                     else
-                        webBuilder.UseSeriLogSqlServer();
+                        webBuilder.UseSeriLogSqlServer();*/
+                  webBuilder.UseStartup<Startup>();
                 });
     }
 }

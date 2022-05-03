@@ -3,6 +3,7 @@ using Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Pranca.Domain.Users.UserAggregate.Contracts;
 using Pranca.Domain.Users.UserAggregate.Entities;
+using Pranca.Infrastructure.EFCore.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Pranca.Infrastructure.EFCore.Repositories.Users
 {
     public class UserRepository : BaseRepository<User>,IUserRepository
     {
-        public UserRepository(DbContext _dbContext) : base(_dbContext)
+        public UserRepository(DatabaseContext _dbContext) : base(_dbContext)
         {
         }
     }
