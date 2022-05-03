@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pranca.Infrastructure.SeriLogger;
 
 namespace Pranca.WebApp
 {
@@ -20,7 +21,10 @@ namespace Pranca.WebApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
+                        webBuilder.UseSeriLogConsole();
+                    else
+                        webBuilder.UseSeriLogSqlServer();
                 });
     }
 }

@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pranca.Infrastructure.Core\Pranca.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\Pranca.Infrastructure.SeriLogger\Pranca.Infrastructure.SeriLogger.csproj" />
   </ItemGroup>
 
 </Project>

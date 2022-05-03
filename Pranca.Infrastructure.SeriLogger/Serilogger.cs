@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Serilog.Events;
 
 namespace Pranca.Infrastructure.SeriLogger
 {
@@ -12,7 +13,7 @@ namespace Pranca.Infrastructure.SeriLogger
     {
         public Serilogger()
         {
-
+            Log.Logger = new SerilogConfig().ConfigSqlServer(LogEventLevel.Warning).CreateLogger();
         }
 
         public void Debug(string message)
