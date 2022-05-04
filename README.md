@@ -1,2 +1,2 @@
-# ecommerce with asp.net core razer pages
-ecommerce template for learning razer page and .net core
+# ecommerce with asp.net core razor pages
+ecommerce template for learning razor page and .net core
